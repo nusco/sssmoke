@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
+require 'sinatra'
 
-exec 'rackup'
+set :views, Dir.pwd
 
+get '/' do
+  erb :index
+end
+
+get '/:page' do |page|
+  erb page.to_sym
+end
