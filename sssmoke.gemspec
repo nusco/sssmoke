@@ -5,11 +5,11 @@ require 'sssmoke/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "sssmoke"
-  gem.version       = Sssmoke::VERSION
+  gem.version       = "0.0.1"
   gem.authors       = ["Paolo \"Nusco\" Perrotta"]
   gem.email         = ["paolo.nusco.perrotta@gmail.com"]
   gem.description   = %q{Slap a Ruby script on a web server in seconds.}
-  gem.summary       = %q{Put erb templates in a folder and run them in a server with the 'sssmoke' command.}
+  gem.summary       = %q{Put erb templates in a folder and run them in a server with the 'rackup' command.}
   gem.homepage      = "https://github.com/nusco/sssmoke"
 
   gem.files         = `git ls-files`.split($/)
