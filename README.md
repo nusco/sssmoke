@@ -1,4 +1,4 @@
-herring
+Herring
 =======
 
-Slap a Ruby script on a web server in seconds
+Slap a Ruby script on a web server in seconds.
