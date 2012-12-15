@@ -1,16 +1,17 @@
 #!/usr/bin/env ruby
 require 'sinatra/base'
 
-class Frontend < Sinatra::Base
-  set :views, Dir.pwd
-
-  get '/' do
-    erb :index
+filename = ARGV[0] || "."
+if File.directory? filename
+  Class.new(Sinatra::Base) do
+    set :views, filename
+    get('/') { erb :index }
+    get('/:page') {|page| erb page.to_sym }
+    run!
   end
-
-  get '/:page' do |page|
-    erb page.to_sym
+else
+  Class.new(Sinatra::Base) do
+    get('/') { Tilt::ERBTemplate.new(filename).render }
+    run!
   end
-
-  run!
 end
