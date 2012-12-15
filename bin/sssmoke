@@ -1,12 +1,16 @@
 #!/usr/bin/env ruby
-require 'sinatra'
+require 'sinatra/base'
 
-set :views, Dir.pwd
+class Frontend < Sinatra::Base
+  set :views, Dir.pwd
 
-get '/' do
-  erb :index
-end
+  get '/' do
+    erb :index
+  end
 
-get '/:page' do |page|
-  erb page.to_sym
+  get '/:page' do |page|
+    erb page.to_sym
+  end
+
+  run!
 end
