@@ -1,1 +1,4 @@
-rackup
+#!/usr/bin/env ruby
+
+exec 'rackup'
+
