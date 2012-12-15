@@ -8,10 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Sssmoke::VERSION
   gem.authors       = ["Paolo \"Nusco\" Perrotta"]
   gem.email         = ["paolo.nusco.perrotta@gmail.com"]
-  gem.description   = %q{Slap a Ruby script on a web server in seconds.}
-  gem.summary       = %q{Put erb templates in a folder and run them in a server with the 'rackup' command.}
+  gem.description   = %q{Slap Rubys script on a web server in seconds.}
+  gem.summary       = %q{Put erb templates in a folder and run them in a server with the 'sssmoke' command.}
   gem.homepage      = "https://github.com/nusco/sssmoke"
-
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

@@ -1,30 +1,34 @@
 # Sssmoke
 
-Slap a Ruby script on a web server in seconds.
+Slap Ruby scripts on a web server in seconds.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'sssmoke'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install sssmoke
 
 ## Usage
 
-Put erb templates in a folder, go to the folder and run:
+Put erb templates in a directory (with extension _erb_).
 
-    'sssmoke'
+To put the whole directory on a web server, run:
+
+    sssmoke
 
 Now open:
 
-    http://localhost:<your web server's default port>/<name of script>
+    http://localhost:<your web server's default port>/<name of erb script>
+
+
+## Pro Usage for Powah Usah
+
+If you want to sssmoke a directory other than the current directory:
+
+    sssmoke <directory name>
+
+To expose a single template at the server's root:
+
+    sssmoke <file name>
+
 
 ## Contributing
 

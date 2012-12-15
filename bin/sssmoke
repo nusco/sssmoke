@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require 'sinatra/base'
+require 'erb'
+require 'tilt'
 
 filename = ARGV[0] || "."
 if File.directory? filename
