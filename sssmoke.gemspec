@@ -5,7 +5,7 @@ require 'sssmoke/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "sssmoke"
-  gem.version       = "0.0.1"
+  gem.version       = Sssmoke::VERSION
   gem.authors       = ["Paolo \"Nusco\" Perrotta"]
   gem.email         = ["paolo.nusco.perrotta@gmail.com"]
   gem.description   = %q{Slap a Ruby script on a web server in seconds.}
