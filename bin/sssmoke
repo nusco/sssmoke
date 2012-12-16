@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 
+ENV['filename'] = ARGV[0] if ARGV[0]
+
 require 'sssmoke'
 Sssmoke::Base.run!
