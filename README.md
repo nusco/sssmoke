@@ -21,4 +21,4 @@ A template named `foo.erb` will get the URL `http://localhost:8888/foo`.
     sssmoke directory_name      # sssmoke templates from another directory
     sssmoke template_name.erb   # sssmoke a single template at http://localhost:8888/
 
-That's all. (As to the reason why it's called "Sssmoke"- that story would be better told in person.)
+That's all. (As to the reason why it's called "Sssmoke" - that story would be better told in person.)
