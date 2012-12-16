@@ -72,4 +72,11 @@ class SecurityTest < SssmokeTest
     get '/../simple'
     assert_equal 404, last_response.status
   end
+  
+  def test_hide_exceptions
+    ENV['filename'] = 'test/data/'
+    get '/error'
+    assert_equal 500, last_response.status
+    assert_equal '<h1>Internal Server Error</h1>', last_response.body
+  end
 end

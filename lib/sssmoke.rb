@@ -19,7 +19,7 @@ module Sssmoke
       end
     end
     
-    configure { set :port, 8888 }
+    configure { set :port => 8888, :show_exceptions => false }
     error(404) { [404, "404 - Page not found"] }
   end
 end
