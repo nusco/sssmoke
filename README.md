@@ -1,5 +1,7 @@
 # Sssmoke
 
+![Build Status](https://secure.travis-ci.org/nusco/sssmoke.png)
+
 Slap Ruby scripts on a web server in seconds.
 
 ## Installation
