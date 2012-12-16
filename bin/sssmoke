@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
-require "sssmoke"
+require 'sssmoke'
 Sssmoke::Base.run!

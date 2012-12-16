@@ -2,8 +2,6 @@ require 'sssmoke'
 require 'test/unit'
 require 'rack/test'
 
-ARGV.clear
-
 class SssmokeTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
@@ -12,13 +10,13 @@ class SssmokeTest < Test::Unit::TestCase
   end
 
   def teardown
-    ARGV.clear
+    ENV['filename'] = nil
   end
 end
 
 class RenderFileTest < SssmokeTest
   def setup
-    ARGV << "test/data/simple.erb"
+    ENV['filename'] = "test/data/simple.erb"
   end
   
   def test_render_root
@@ -33,11 +31,11 @@ class RenderFileTest < SssmokeTest
   end
 end
 
-class RenderDirectoryTest < SssmokeTest
+class RenderFolderTest < SssmokeTest
   def setup
-    ARGV << 'test/data/'
+    ENV['filename'] = 'test/data/'
   end
-
+  
   def test_render_file
     get '/simple'
     assert_equal 'Simple page', last_response.body
@@ -50,7 +48,7 @@ class RenderDirectoryTest < SssmokeTest
 
   def test_render_index
     get '/'
-    assert_equal 'Index file', last_response.body
+    assert_equal 'Index page', last_response.body
   end
   
   def test_404
@@ -60,9 +58,17 @@ class RenderDirectoryTest < SssmokeTest
   end
 end
 
+class RenderDefaultFolderTest < SssmokeTest
+  def test_default_folder
+    ENV['filename'] = nil
+    get '/test/data/simple'
+    assert_equal 'Simple page', last_response.body
+  end
+end
+
 class SecurityTest < SssmokeTest
   def test_hide_external_folders
-    ARGV << 'test/data/subdir'
+    ENV['filename'] = 'test/data/subdir'
     get '/../simple'
     assert_equal 404, last_response.status
   end
