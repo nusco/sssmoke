@@ -12,6 +12,8 @@ class SssmokeTest < Test::Unit::TestCase
   def teardown
     ENV['filename'] = nil
   end
+  
+  def test_keep_rbx_happy; end # or else it will break under Rubinius
 end
 
 class RenderFileTest < SssmokeTest
