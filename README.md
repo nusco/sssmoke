@@ -8,18 +8,15 @@ Slap Ruby scripts on a web server in seconds.
 
 ## Usage
 
-Go to a folder containing erb templates, and:
+Put your erb templates in a directory, then run them in a web server by typing:
 
     sssmoke
 
-For example, a template named _foo.erb_ will be available at _http://localhost:8888/foo_.
+A template named `foo.erb` will get the URL `http://localhost:8888/foo`.
 
 ## Pro Usage for Powah Usahs
 
-If you want to sssmoke a directory other than the current directory:
+    sssmoke directory_name      # sssmoke templates from another directory
+    sssmoke template_name.erb   # sssmoke a single template at http://localhost:8888/
 
-    sssmoke <directory name>
-
-To smoke a single erb template at _http://localhost:8888_:
-
-    sssmoke <file name>
+That's all. (As to the reason why it's called "Sssmoke"- that story would be better told in person.)
