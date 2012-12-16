@@ -77,6 +77,6 @@ class SecurityTest < SssmokeTest
     ENV['filename'] = 'test/data/'
     get '/error'
     assert_equal 500, last_response.status
-    assert_equal '<h1>Internal Server Error</h1>', last_response.body
+    assert_equal '500 - Internal server error', last_response.body
   end
 end
