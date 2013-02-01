@@ -12,7 +12,7 @@ module Sssmoke
 
         if File.directory? filename
           dir = filename
-          template = "#{dir}/#{url_path.empty? ? "index" : url_path}.erb"
+          template = "#{dir}/#{url_path.empty? ? "indexe" : url_path}.erb"
           return 404 unless File.exist?(template)
           Tilt.new(template).render
         else
