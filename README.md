@@ -4,6 +4,8 @@
 
 Slap Ruby scripts on a web server in seconds.
 
+Warning: Sssmoke is *not* intended for public servers. It's just an ultra-quick way to put scripts on one of your own machines - like, a build machine.
+
 ## Installation
 
     gem install sssmoke
