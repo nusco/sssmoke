@@ -1,8 +1,8 @@
 require 'sssmoke'
-require 'test/unit'
+require 'minitest/autorun'
 require 'rack/test'
 
-class SssmokeTest < Test::Unit::TestCase
+class SssmokeTest < Minitest::Test
   include Rack::Test::Methods
 
   def app

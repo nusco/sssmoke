@@ -15,7 +15,8 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
-  gem.add_development_dependency 'rake', '>= 10.0.0'
-  gem.add_development_dependency 'rack-test', '>= 0.6.2'
+  gem.add_development_dependency 'rake', '>= 10.4.2'
+  gem.add_development_dependency 'rack-test', '>= 0.6.3'
+  gem.add_development_dependency 'minitest', '>= 5.4.3'
   gem.add_dependency 'sinatra', '>= 1.3.5'
 end
